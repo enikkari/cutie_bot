@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "start bot"
 source environment_vars.sh
 
-python call_apis.py
+python bot_main.py
