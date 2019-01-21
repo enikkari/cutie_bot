@@ -10,13 +10,12 @@ def get_r_aww(user_agent=""):
     url = "https://www.reddit.com/r/aww/top.json"
 
     response = requests.get(url, headers={"User-Agent": user_agent})
-    logger.info(response.text)
 
     return response.json()["data"]["children"][0]["data"]
 
 
 def post_to_flowdock(flowdock_token, flow_token, bot_name, message):
-    url = f"https://{flowdock_token}@api.flowdock.com/messages/chat/{flow_token}"
+    url = f"https://{flow_token}@api.flowdock.com/messages/chat/{flow_token}"
 
     payload = \
         {"external_user_name": bot_name,
