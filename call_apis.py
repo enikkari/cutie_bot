@@ -6,10 +6,10 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__name__)
 
 
-def get_r_aww():
+def get_r_aww(user_agent=""):
     url = "https://www.reddit.com/r/aww/top.json"
 
-    response = requests.get(url)
+    response = requests.get(url, headers={"User-Agent": user_agent})
     logger.info(response.text)
 
     return response.json()["data"]["children"][0]["data"]

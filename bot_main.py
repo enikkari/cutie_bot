@@ -14,7 +14,7 @@ def main():
     logger.info(f'main()')
 
     try:
-        result = get_r_aww()
+        result = get_r_aww(user_agent=bot_name)
         title = result.get('title')
         link = result.get('url')
         message = f'Look at this cutie:\n "{title}"\n {link}'
