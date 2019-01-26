@@ -15,7 +15,7 @@ def get_r_aww(user_agent=""):
 
 
 def post_to_flowdock(flowdock_token, flow_token, bot_name, message):
-    url = f"https://{flow_token}@api.flowdock.com/messages/chat/{flow_token}"
+    url = f"https://{flowdock_token}@api.flowdock.com/messages/chat/{flow_token}"
 
     payload = \
         {"external_user_name": bot_name,

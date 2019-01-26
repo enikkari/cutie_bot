@@ -19,7 +19,7 @@ def main():
 
 
 if __name__ == '__main__':
-    run_at = "10:02"
+    run_at = "14:02"
     logger.info(f'Running time: {run_at}')
     schedule.every().day.at(run_at).do(main)
     while True:
